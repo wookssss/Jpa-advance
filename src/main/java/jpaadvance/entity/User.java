@@ -1,6 +1,7 @@
 package jpaadvance.entity;
 
 import jakarta.persistence.*;
+import jpaadvance.entity.Food;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,4 +14,12 @@ public class User {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+
+    @OneToOne(mappedBy = "user")
+    private Food food;
+
+    public void addFood(Food food) {
+        this.food = food;
+        food.setUser(this);
+    }
 }
