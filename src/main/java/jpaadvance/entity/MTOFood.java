@@ -1,25 +1,21 @@
 package jpaadvance.entity;
 
 import jakarta.persistence.*;
-import jpaadvance.entity.Food;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
 @Getter
 @Setter
-@Table(name = "users")
-public class User {
+@Table(name = "mto_food")
+public class MTOFood {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private double price;
 
-    @OneToOne(mappedBy = "user")
-    private Food food;
-
-    public void addFood(Food food) {
-        this.food = food;
-        food.setUser(this);
-    }
+    @ManyToOne
+    @JoinColumn(name = "user_id")
+    private MTOUser mtoUser;
 }

@@ -7,15 +7,18 @@ import lombok.Setter;
 @Entity
 @Getter
 @Setter
-@Table(name = "food")
-public class Food {
+@Table(name = "oto_users")
+public class OTOUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private double price;
 
-    @OneToOne
-    @JoinColumn(name = "user_id")
-    private User user;
+    @OneToOne(mappedBy = "otoUser")
+    private OTOFood otoFood;
+
+    public void addFood(OTOFood otoFood) {
+        this.otoFood = otoFood;
+        otoFood.setOtoUser(this);
+    }
 }
