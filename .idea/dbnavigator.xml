@@ -70,7 +70,10 @@ select * from mto_food;]]></console>
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="schemas/orderapp/tables/mto_food" />
+      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="schemas/orderapp/tables/mto_users" />
+    </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="e06fa471-065e-4494-92e9-efa8ec996d0d" />

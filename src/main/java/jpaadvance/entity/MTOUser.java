@@ -17,7 +17,7 @@ public class MTOUser {
     private Long id;
     private String name;
 
-    @OneToMany(mappedBy = "mtoUser", cascade = {CascadeType.PERSIST,CascadeType.REMOVE})
+    @OneToMany(mappedBy = "mtoUser", cascade = CascadeType.PERSIST, orphanRemoval = true)
     private List<MTOFood> foodList = new ArrayList<>();
 
     public void addFoodList(MTOFood mtoFood) {
