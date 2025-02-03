@@ -3,6 +3,7 @@ package jpaadvance.entity;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
+import org.hibernate.annotations.Fetch;
 
 @Entity
 @Getter
@@ -15,7 +16,7 @@ public class MTOFood {
     private String name;
     private double price;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "user_id")
     private MTOUser mtoUser;
 }

@@ -61,9 +61,9 @@ FROM food f
          INNER JOIN users u on o.user_id = u.id
 WHERE o.user_id = 1;
 
-drop table food,orders,users;
+drop table mto_food,mto_users;
 
-select * from mtm_food;]]></console>
+select * from mto_food;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -71,7 +71,8 @@ select * from mtm_food;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="schemas/orderapp/tables/mtm_food" />
+      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="schemas/orderapp/tables/mto_food" />
+      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="schemas/orderapp/tables/mto_users" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
