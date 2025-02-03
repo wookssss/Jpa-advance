@@ -59,7 +59,11 @@ SELECT u.name as username, f.name as foodname, o.order_date as orderdate
 FROM food f
          INNER JOIN orders o on f.id = o.food_id
          INNER JOIN users u on o.user_id = u.id
-WHERE o.user_id = 1;]]></console>
+WHERE o.user_id = 1;
+
+drop table food,orders,users;
+
+select * from mtm_food;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -67,13 +71,28 @@ WHERE o.user_id = 1;]]></console>
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files>
-      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="consoles/@localhost" />
+      <object connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" object-ref="schemas/orderapp/tables/mtm_food" />
     </open-files>
   </component>
   <component name="DBNavigator.Project.DatabaseSessionManager">
     <connection id="e06fa471-065e-4494-92e9-efa8ec996d0d" />
   </component>
   <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.mto_users" active-filter-id="bc706700-66a4-4dec-944b-6d02d9d60239">
+      <filter id="bc706700-66a4-4dec-944b-6d02d9d60239" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.otm_users" active-filter-id="6574ad06-be11-4100-847f-8bb798addbd9">
+      <filter id="6574ad06-be11-4100-847f-8bb798addbd9" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.oto_users" active-filter-id="dc2375c4-68ee-4221-aa32-f31345b68485">
+      <filter id="dc2375c4-68ee-4221-aa32-f31345b68485" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.mtm_food" active-filter-id="8ac6a3c8-c697-4eab-8719-b8654ad0313c">
+      <filter id="8ac6a3c8-c697-4eab-8719-b8654ad0313c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.otm_food" active-filter-id="c13de5eb-2cdb-4680-a4a8-67fffd794f8f">
+      <filter id="c13de5eb-2cdb-4680-a4a8-67fffd794f8f" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
     <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.orders" active-filter-id="13851111-2694-48fc-b9ab-3b2346250a41">
       <filter id="13851111-2694-48fc-b9ab-3b2346250a41" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
     </filter-actions>
@@ -82,12 +101,27 @@ WHERE o.user_id = 1;]]></console>
         <condition column="id" operator="=" value="" active="true" />
       </filter>
     </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.mto_food" active-filter-id="f8ad509d-8238-48ba-a31e-63ad04d119ae">
+      <filter id="f8ad509d-8238-48ba-a31e-63ad04d119ae" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.mtm_users" active-filter-id="94877d98-0140-48bd-957c-c46026c3ee5a">
+      <filter id="94877d98-0140-48bd-957c-c46026c3ee5a" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
     <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.food" active-filter-id="4e8fe8c0-124d-4eb3-a3e5-590322040d05">
       <filter id="4e8fe8c0-124d-4eb3-a3e5-590322040d05" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
+    </filter-actions>
+    <filter-actions connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" dataset="orderapp.oto_food" active-filter-id="0dbe7c68-5c41-4e42-924b-835e7a57c54c">
+      <filter id="0dbe7c68-5c41-4e42-924b-835e7a57c54c" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND" />
     </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.FileConnectionMappingManager">
+    <mapping file-url="file://$USER_HOME$/AppData/Local/Temp/dbn-13344057658843703458.mysql" connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" session-id="MAIN" current-schema="orderapp" />
+    <mapping file-url="file://$USER_HOME$/AppData/Local/Temp/dbn-14945773157888330370.mysql" connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" session-id="MAIN" current-schema="orderapp" />
+    <mapping file-url="file://$USER_HOME$/AppData/Local/Temp/dbn-15939281862093065948.mysql" connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" session-id="MAIN" current-schema="orderapp" />
+    <mapping file-url="file://$USER_HOME$/AppData/Local/Temp/dbn-10682889323730634029.mysql" connection-id="e06fa471-065e-4494-92e9-efa8ec996d0d" session-id="MAIN" current-schema="orderapp" />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
